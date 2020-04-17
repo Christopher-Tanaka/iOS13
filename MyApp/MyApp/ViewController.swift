@@ -17,6 +17,27 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func RunHttpTest(_ sender: Any) {
+        
+        let url = URL(string: "http://www.stackoverflow.com")!
+        let session = URLSession.shared
+        
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        let connection = NSURLConnection(request: request, delegate:nil, startImmediately: true)
+        
+        let task = session.dataTask(with: url, completionHandler: { data, response, error in
+        // Check the response
+                print(error)
+                print(response)
+        })
+        task.resume()
+    }
+    
 
+    
+    
 }
 

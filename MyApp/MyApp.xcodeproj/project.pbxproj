@@ -15,6 +15,7 @@
 		6A0F7ADC242EB785006FF5EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A0F7ADA242EB785006FF5EB /* LaunchScreen.storyboard */; };
 		6A0F7AE7242EB785006FF5EB /* MyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0F7AE6242EB785006FF5EB /* MyAppTests.swift */; };
 		6A0F7AF2242EB785006FF5EB /* MyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0F7AF1242EB785006FF5EB /* MyAppUITests.swift */; };
+		6AA5EAFD243C243B005D7043 /* AppHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA5EAFC243C243B005D7043 /* AppHttpClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		6A0F7AED242EB785006FF5EB /* MyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A0F7AF1242EB785006FF5EB /* MyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppUITests.swift; sourceTree = "<group>"; };
 		6A0F7AF3242EB785006FF5EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AA5EAFC243C243B005D7043 /* AppHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHttpClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		6A0F7ACE242EB782006FF5EB /* MyApp */ = {
 			isa = PBXGroup;
 			children = (
+				6AA5EAFB243C2399005D7043 /* Web */,
 				6A0F7ACF242EB783006FF5EB /* AppDelegate.swift */,
 				6A0F7AD1242EB783006FF5EB /* SceneDelegate.swift */,
 				6A0F7AD3242EB783006FF5EB /* ViewController.swift */,
@@ -126,6 +129,14 @@
 				6A0F7AF3242EB785006FF5EB /* Info.plist */,
 			);
 			path = MyAppUITests;
+			sourceTree = "<group>";
+		};
+		6AA5EAFB243C2399005D7043 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				6AA5EAFC243C243B005D7043 /* AppHttpClient.swift */,
+			);
+			path = Web;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 			files = (
 				6A0F7AD4242EB783006FF5EB /* ViewController.swift in Sources */,
 				6A0F7AD0242EB783006FF5EB /* AppDelegate.swift in Sources */,
+				6AA5EAFD243C243B005D7043 /* AppHttpClient.swift in Sources */,
 				6A0F7AD2242EB783006FF5EB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
