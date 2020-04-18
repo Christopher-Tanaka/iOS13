@@ -19,6 +19,28 @@ class ViewController: UIViewController {
     
     @IBAction func RunHttpTest(_ sender: Any) {
         
+        validateManatoryFields()
+        
+        let auth = AuthService()
+        let username = usernameTxtField.text!
+        let password = passwordTxtField.text!
+        
+        let isLogged = auth.login(username: username, userPassword: password)
+        
+        print("logged? \(isLogged)")
+    }
+    
+    func validateManatoryFields() {
+        
+    }
+    
+    
+    func ReadSampleJson() -> String {
+        return "{\"person\": {\"name\": \"Teste\", \"id\": 1}}"
+    }
+    
+    func runHttpTestOld() {
+        
         let text = ReadSampleJson()
         print("File read: \(text)" )
         
@@ -64,11 +86,7 @@ class ViewController: UIViewController {
             }
         })
         task.resume()
-    }
-    
-    
-    func ReadSampleJson() -> String {
-        return "{\"person\": {\"name\": \"Teste\", \"id\": 1}}"
+        
     }
     
 }
