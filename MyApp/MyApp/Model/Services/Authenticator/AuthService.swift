@@ -8,16 +8,24 @@
 
 import Foundation
 
-class AuthService {
+public class AuthService {
     
-    func login(username: String, userPassword: String) -> Bool {
+    public func login(username: String, password: String) -> Bool {
         
-        return getCustomer(username: username, userPassword: userPassword)
+        return getCustomer(username: username, password: password)
     }
     
-    private func getCustomer(username: String, userPassword: String) -> Bool{
+    private func getCustomer(username: String, password: String) -> Bool{
         let personService = HttpPersonService()
         
-        return personService.getPerson(username: username, password: userPassword)
+        return personService.getPerson(username: username, password: password)
+    }
+    
+    private func validateBasic(username: String, password: String) -> Bool {
+        if(username.isEmpty || password.isEmpty) {
+            return false
+        }
+        
+        return true
     }
 }
