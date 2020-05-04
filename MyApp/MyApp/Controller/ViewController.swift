@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
     @IBOutlet weak var usernameTxtField: UITextField!
@@ -16,6 +17,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        createUserExample()
         // Do any additional setup after loading the view.
     }
     
@@ -61,6 +64,22 @@ class ViewController: UIViewController {
         animation.toValue = NSValue(cgPoint: CGPoint(x: viewToShake.center.x + 10, y: viewToShake.center.y))
 
         viewToShake.layer.add(animation, forKey: "position")
+    }
+    
+    func createUserExample() {
+        
+        let email = "testUser@email.com"
+        let password = "123456"
+        
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            
+            if let e = error {
+                print(e)
+            } else {
+                self.performSegue(withIdentifier: "PortfolioSegue", sender: self)
+            }
+            
+        }
     }
     
     
